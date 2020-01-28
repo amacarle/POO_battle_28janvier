@@ -3,7 +3,7 @@ require "pry"
 class Player
   attr_accessor :name, :life_points
 
-  # déclaration de notre initialize, c'est ce qui va nous servir pour créer le player.new
+  # déclaration de notre initialize, c'est ce qui va nous servir pour créer le player.new/ génère chaque instance
   def initialize(name)
     @name = name
     @life_points = life_points = 10
@@ -25,7 +25,7 @@ class Player
 
   end 
  
-  #définition de l'attaque et  de qui attaque qui
+  #une seule phase d'attaque qu'il est possible d'attribuer à telle ou telle instance
   def attacks(is_attacked)
     puts "#{@name} attacks #{is_attacked.name}"
     current_attack = compute_damage

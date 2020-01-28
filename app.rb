@@ -21,12 +21,12 @@ puts player2.show_state
 
 puts "Passons à la phase d'attaque :"
 
+#lancement de la 1ière attaque
 player1.attacks(player2)
 player2.attacks(player1)
 
-while player1.life_points>0 && player2.life_points>0 do 
-   
-
+# fait tourner une attaque tant que personne n'est mort
+while player1.life_points>0 && player2.life_points>0 do    
     player1.show_state
     player2.show_state
     puts "     "
@@ -39,5 +39,3 @@ while player1.life_points>0 && player2.life_points>0 do
     player2.attacks(player1)    
 end
 
-
-puts "    "
